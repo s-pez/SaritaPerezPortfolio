@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sarita Perez - Kratom Vendor Geographic Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/sarita-perez-/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/s-pez" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+								<h1>Geographic Distribution of Kratom Vendors </h1>
+									</header>
+  <h2>Executive Summary</h2>
+  <p>
+    This project analyzes the geographic distribution of kratom vendors across the United States using a combination of data cleaning, geospatial processing, and population-based normalization. 
+    Kratom is a plant-derived substance (<em>Mitragyna speciosa</em>) that is commonly sold in the U.S. in beverages, powders, or capsules and is often marketed for its stimulant or pain-relieving effects, though its legal status and regulation vary by state.
+  </p>
+
+  <p>
+    Multiple raw datasets were scraped from the store locators of three kratom drink retailers, then consolidated, standardized, and de-duplicated in R to create a unified dataset of vendor locations. 
+    This process transformed fragmented and inconsistent source data into a clean, structured dataset suitable for spatial analysis.
+  </p>
+
+  <p>
+    Using spatial joins with U.S. Census boundary files, each vendor location was mapped to its corresponding county and ZIP code. The dataset was then aggregated at the county level and combined with population data to calculate the number of kratom stores per capita. 
+    This normalization enables more meaningful comparisons across regions by accounting for differences in population size, rather than relying solely on raw store counts.
+  </p>
+
+  <p>
+    To complement the analysis, an interactive Tableau map was developed to visualize the geographic distribution of kratom vendors per capita across the United States. 
+    The map highlights regional patterns, clusters, and potential disparities in access, providing an intuitive way to explore spatial trends in the data.
+  </p>
+
+  <p>
+    Overall, this project demonstrates end-to-end data processing, including data cleaning, geospatial analysis, and data visualization, with a focus on transforming fragmented location data into actionable geographic insights.
+  </p>
+
+  <h3>Public Health Considerations</h3>
+
+  <p>
+    While kratom is often marketed as a “natural” product, there are important safety and regulatory concerns. According to the U.S. Food and Drug Administration (FDA), kratom has <strong>not been approved for any medical use</strong> and is not considered a lawful dietary supplement or food additive.
+  </p>
+
+  <ul>
+    <li><strong>Addiction and dependence</strong> due to its action on opioid receptors</li>
+    <li><strong>Serious adverse health effects</strong>, including liver toxicity, seizures, and substance use disorder</li>
+    <li><strong>Reported deaths and hospitalizations</strong>, sometimes involving kratom alone or in combination with other substances</li>
+    <li><strong>Contamination risks</strong>, including past links to Salmonella outbreaks</li>
+    <li><strong>Unregulated product quality</strong>, leading to variability in potency and purity</li>
+  </ul>
+
+  <p>
+    The FDA continues to advise consumers to avoid kratom products, citing serious safety concerns and a lack of sufficient evidence supporting its safety or effectiveness. 
+    <a href="https://www.fda.gov/news-events/public-health-focus/fda-and-kratom" target="_blank">
+      Learn more from the FDA
+    </a>.
+  </p>
+  
+  <div class='tableauPlaceholder' id='viz1773959134896' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Kr&#47;KratomBeverageRetailDensityPerCapitabyU_S_County&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='KratomBeverageRetailDensityPerCapitabyU_S_County&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Kr&#47;KratomBeverageRetailDensityPerCapitabyU_S_County&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1773959134896');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1200px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1200px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</section>
+
+  <h2>Repository</h2>
+  <p>Full code, analysis, and documentation available on GitHub <a href="https://github.com/s-pez/Kratom-Vendor-Geospatial-Analysis-Project"><u>here</u></a>. </p>
+</section>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="contactme.html">Contact Me</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li>
+											<span class="opener">Data Projects By Language</span>
+											<ul>
+												<li><a href="rmain.html">R</a></li>
+												<li><a href="pythonmain.html">Python</a></li>
+												<li><a href="sasmain.html">SAS</a></li>
+												<li><a href="sqlmain.html">SQL</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Data Visualization Projects</span>
+											<ul>
+												<li><a href="tableaumain.html">Tableau</a></li>
+												<li><a href="powerbimain.html">Power BI</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="pythonpost2.html" class="image"><img src="images/pythonpost2img1.png" alt="" /></a>
+											<p>Immunization Information System Data Quality Audit</p>
+										</article>
+										<article>
+											<a href="pythonpost1.html" class="image"><img src="images/pythonpost1img2.png" alt="" /></a>
+											<p>Risk-Adjusted Portfolio Optimization and Stability Analysis</p>
+										</article>
+										<article>
+											<a href="tabpost2.html" class="image"><img src="images/tabpost2img.png" alt="" /></a>
+											<p>Cardiovascular Risk Profiles Among Female Patients</p>
+										</article>
+									</div>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sarita Perez. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+			<!-- Sidebar end -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

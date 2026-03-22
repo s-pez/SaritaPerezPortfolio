@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sarita Perez - Contact Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+			:root {
+				--cream: #faf7f2;
+				--warm-white: #fff9f4;
+				--ink: #1c1a18;
+				--muted: #6b6560;
+				--accent: #b85c38;
+				--accent-light: #e8c4b0;
+				--border: #e4ddd5;
+			}
+			#header .logo {
+				font-family: 'Lora', serif;
+				font-size: 3em;
+				font-weight: 600;
+			}
+			#header .icons {
+			line-height: 1;
+			margin-top: 2em;
+			}
+
+		</style>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h1 class="logo">Contact Me</h1>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/sarita-perez-/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/s-pez" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+									<!-- Content -->
+											<h3>If you have questions about my projects, are interested in collaborating, or want to discuss opportunities, feel free to reach out. You’re also welcome to connect with me on LinkedIn <a href="https://www.linkedin.com/in/sarita-perez-/"><u>here</u></a>— I’m always happy to expand my professional network.</h3>
+									<hr class="major" />
+									<!-- Form -->
+										<h3>Form</h3>
+
+										<form id="contact-form">
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-xsmall">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" required />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" required />
+												</div>
+												<!-- Break -->
+												<div class="col-12">
+													<select name="demo-category" id="demo-category">
+														<option value="">- Message Topic -</option>
+														<option value="Recruiter">Hiring or recruiting</option>
+														<option value="Collaboration">Research or project collaboration</option>
+														<option value="Questions">Questions about my work</option>
+														<option value="Other">Other / just say hi</option>
+													</select>
+												</div>
+												<!-- Break -->
+												<div class="col-4 col-12-small">
+													<input type="radio" id="demo-priority-low" name="demo-priority" value="Low" checked>
+													<label for="demo-priority-low">Low</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="demo-priority-normal" name="demo-priority" value="Normal">
+													<label for="demo-priority-normal">Normal</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="demo-priority-high" name="demo-priority" value="High">
+													<label for="demo-priority-high">High</label>
+												</div>
+												<!-- Break -->
+												<div class="col-6 col-12-small">
+													<input type="checkbox" id="demo-copy" name="demo-copy">
+													<label for="demo-copy">Email me a copy</label>
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="checkbox" id="demo-human" name="demo-human" checked>
+													<label for="demo-human">I am a human</label>
+												</div>
+												<!-- Break -->
+												<div class="col-12">
+													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6" required></textarea>
+												</div>
+												<!-- Break -->
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" value="Send Message" class="primary" /></li>
+														<li><input type="reset" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+
+										<script>
+											// Simple client-side mailto submit to open user's email client
+											(function(){
+												const form = document.getElementById('contact-form');
+												form.addEventListener('submit', function(e){
+													e.preventDefault();
+													const to = 's.perez.pr@outlook.com';
+													const name = document.getElementById('demo-name').value.trim();
+													const email = document.getElementById('demo-email').value.trim();
+													const category = document.getElementById('demo-category').value;
+													const priority = (document.querySelector('input[name="demo-priority"]:checked') || {}).value || '';
+													const copy = document.getElementById('demo-copy').checked;
+													const human = document.getElementById('demo-human').checked;
+													const message = document.getElementById('demo-message').value.trim();
+
+													if(!human){ alert('Please confirm you are human.'); return; }
+													if(!name || !email || !message){ alert('Please fill required fields (Name, Email, Message).'); return; }
+
+													const subject = 'Contact from ' + name + (category ? ' - ' + category : '');
+													let body = '';
+													body += 'Name: ' + name + '\n';
+													body += 'Email: ' + email + '\n';
+													if(category) body += 'Category: ' + category + '\n';
+													if(priority) body += 'Priority: ' + priority + '\n\n';
+													body += 'Message:\n' + message;
+
+													let mailto = 'mailto:' + encodeURIComponent(to) +
+														'?subject=' + encodeURIComponent(subject) +
+														'&body=' + encodeURIComponent(body);
+
+													if(copy) {
+														mailto += '&cc=' + encodeURIComponent(email);
+													}
+
+													// open mail client
+													window.location.href = mailto;
+												});
+											})();
+										</script>
+
+										</div>
+									</div>
+
+								<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="contactme.html">Contact Me</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li>
+											<span class="opener">Data Projects By Language</span>
+											<ul>
+												<li><a href="rmain.html">R</a></li>
+												<li><a href="pythonmain.html">Python</a></li>
+												<li><a href="sasmain.html">SAS</a></li>
+												<li><a href="sqlmain.html">SQL</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Data Visualization Projects</span>
+											<ul>
+												<li><a href="tableaumain.html">Tableau</a></li>
+												<li><a href="powerbimain.html">Power BI</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="pythonpost2.html" class="image"><img src="images/pythonpost2img1.png" alt="" /></a>
+											<p>Immunization Information System Data Quality Audit</p>
+										</article>
+										<article>
+											<a href="pythonpost1.html" class="image"><img src="images/pythonpost1img2.png" alt="" /></a>
+											<p>Risk-Adjusted Portfolio Optimization and Stability Analysis</p>
+										</article>
+										<article>
+											<a href="tabpost2.html" class="image"><img src="images/tabpost2img.png" alt="" /></a>
+											<p>Cardiovascular Risk Profiles Among Female Patients</p>
+										</article>
+									</div>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sarita Perez. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+			<!-- Sidebar end -->
+
+							<!-- Scripts -->
+								<script src="assets/js/jquery.min.js"></script>
+								<script src="assets/js/browser.min.js"></script>
+								<script src="assets/js/breakpoints.min.js"></script>
+								<script src="assets/js/util.js"></script>
+								<script src="assets/js/main.js"></script>
+
+						</body>
+					</html>

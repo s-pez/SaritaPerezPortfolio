@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sarita Perez - Risk-Adjusted Portfolio Optimization and Stability Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/sarita-perez-/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/s-pez" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Risk-Adjusted Portfolio Optimization and Stability Analysis</h1>
+									</header>
+
+  <h2>Project Overview</h2>
+  <p>Comprehensive quantitative analysis comparing multiple portfolio optimization strategies using 10+ years of historical ETF data (2015-2026). This project demonstrates advanced optimization techniques and rigorous out-of-sample testing methodology.</p>
+
+  <h2>Key Accomplishments</h2>
+  <ul>
+    <li><strong>Analyzed 6 Diversified ETF Assets:</strong> SPY (S&P 500), QQQ (NASDAQ), EEM (Emerging Markets), VNQ (Real Estate), GLD (Gold), SLV (Silver)</li>
+    
+    <li><strong>Implemented 5 Advanced Optimization Strategies:</strong> Max Sharpe Ratio, Ledoit-Wolf Shrinkage, Minimum Variance, Risk Parity, and Constrained Optimization with Position Limits</li>
+    
+    <li><strong>Dynamic Rebalancing:</strong> Rolling window optimization with quarterly rebalancing to adapt weights based on recent market conditions</li>
+    
+    <li><strong>Robust Validation:</strong> 500 bootstrap resampling iterations to confirm portfolio stability across different market regimes</li>
+    
+    <li><strong>Out-of-Sample Testing:</strong> Train-test split (2015-2020 training, 2020-2025 testing) prevents overfitting and ensures realistic performance estimates</li>
+    
+    <li><strong>Comprehensive Metrics:</strong> Evaluated all strategies using Annual Return, Volatility, Sharpe Ratio, and Maximum Drawdown metrics</li>
+  </ul>
+
+  <h2>Technical Implementation</h2>
+  <ul>
+    <li><strong>Data Source:</strong> Yahoo Finance (via yfinance Python library)</li>
+    <li><strong>Optimization Method:</strong> Sequential Least Squares Programming (SLSQP) algorithm</li>
+    <li><strong>Statistical Methods:</strong> Covariance estimation, shrinkage estimators (Ledoit-Wolf), correlation analysis</li>
+    <li><strong>Technologies:</strong> Python, pandas, numpy, scipy, scikit-learn, matplotlib</li>
+    <li><strong>Analysis Period:</strong> 10+ years of daily market data</li>
+  </ul>
+
+  <h2>Key Findings</h2>
+  <ul>
+    <li><strong>Optimization Improves Returns:</strong> All optimized strategies significantly outperformed the equal-weight baseline portfolio</li>
+    
+    <li><strong>Shrinkage Estimation Works:</strong> Ledoit-Wolf covariance estimator reduced estimation error and improved out-of-sample performance</li>
+    
+    <li><strong>Risk Management Benefits:</strong> Constraining positions to 30% maximum improved risk-adjusted returns by reducing concentration risk</li>
+    
+    <li><strong>Dynamic Outperforms Static:</strong> Rolling window rebalancing with quarterly updates captured changing market conditions and correlations</li>
+    
+    <li><strong>Commodity Diversification:</strong> Gold and silver allocations provided portfolio stabilization during equity market volatility</li>
+    
+    <li><strong>Bootstrap Validation:</strong> Portfolio weights showed stability across 500 resampling iterations, confirming robustness</li>
+    
+    <li><strong>Out-of-Sample Validation Critical:</strong> This analysis demonstrated why out-of-sample testing is essential for avoiding overfitting bias</li>
+  </ul>
+
+  <h2>Optimization Strategies Compared</h2>
+
+  <h3>1. Original (Max Sharpe Ratio)</h3>
+  <p>Maximizes risk-adjusted returns using standard portfolio optimization. Baseline approach that serves as foundation for comparison.</p>
+
+  <h3>2. Ledoit-Wolf Shrinkage Estimator</h3>
+  <p>Improves covariance matrix estimation through statistical shrinkage. Reduces estimation error in small-sample scenarios and stabilizes predictions.</p>
+
+  <h3>3. Minimum Variance Portfolio</h3>
+  <p>Minimizes portfolio volatility regardless of expected returns. Often outperforms in practice due to robustness against mean-return estimation errors.</p>
+
+  <h3>4. Risk Parity Portfolio</h3>
+  <p>Allocates weights to achieve equal risk contribution from each asset. Simple, intuitive approach with natural diversification properties.</p>
+
+  <h3>5. Constrained Optimization (30% Position Limit)</h3>
+  <p>Maximizes Sharpe ratio while limiting individual positions to 30%. Prevents excessive concentration and improves practical implementability.</p>
+
+  <h3>6. Rolling Window with Quarterly Rebalancing</h3>
+  <p>Adapts portfolio weights quarterly based on recent market conditions. Uses 1-year rolling lookback window to capture tactical allocation opportunities.</p>
+
+  <h2>Assets Included</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Asset Class</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>SPY</strong></td>
+        <td>US Large Cap Equity</td>
+        <td>Core portfolio exposure to S&P 500</td>
+      </tr>
+      <tr>
+        <td><strong>QQQ</strong></td>
+        <td>US Technology/Growth</td>
+        <td>Growth equity exposure to NASDAQ-100</td>
+      </tr>
+      <tr>
+        <td><strong>EEM</strong></td>
+        <td>International Equity</td>
+        <td>Emerging market diversification</td>
+      </tr>
+      <tr>
+        <td><strong>VNQ</strong></td>
+        <td>Real Estate (REIT)</td>
+        <td>Alternative asset class exposure</td>
+      </tr>
+      <tr>
+        <td><strong>GLD</strong></td>
+        <td>Gold Commodity</td>
+        <td>Inflation hedge and volatility dampener</td>
+      </tr>
+      <tr>
+        <td><strong>SLV</strong></td>
+        <td>Silver Commodity</td>
+        <td>Portfolio diversification and crisis insurance</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Performance Metrics</h2>
+  <ul>
+    <li><strong>Annual Return:</strong> Average yearly returns over out-of-sample test period</li>
+    <li><strong>Volatility (Annualized):</strong> Standard deviation of daily returns scaled to annual basis</li>
+    <li><strong>Sharpe Ratio:</strong> Risk-adjusted return metric; higher indicates better risk-adjusted performance</li>
+    <li><strong>Maximum Drawdown:</strong> Largest peak-to-trough decline; indicates worst-case portfolio loss</li>
+  </ul>
+
+  <h2>Deliverables</h2>
+  <ul>
+	    <head>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th { background-color: #4CAF50; color: white; padding: 12px; text-align: left; }
+            td { border: 1px solid #ddd; padding: 10px; text-align: right; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+            h1 { color: #333; }
+        </style>
+    </head>
+    <body>
+        <h3>Portfolio Strategy Performance Comparison</h3>
+        <p><strong>Test Period:</strong> 2020-01-02 to 2025-12-31</p>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Annual Return</th>
+      <th>Volatility</th>
+      <th>Sharpe Ratio</th>
+      <th>Max Drawdown</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Original (Max Sharpe)</th>
+      <td>0.1788</td>
+      <td>0.1818</td>
+      <td>0.8734</td>
+      <td>-0.2938</td>
+    </tr>
+    <tr>
+      <th>Ledoit-Wolf Shrinkage</th>
+      <td>0.1788</td>
+      <td>0.1822</td>
+      <td>0.8716</td>
+      <td>-0.2945</td>
+    </tr>
+    <tr>
+      <th>Minimum Variance</th>
+      <td>0.1457</td>
+      <td>0.1404</td>
+      <td>0.8950</td>
+      <td>-0.2250</td>
+    </tr>
+    <tr>
+      <th>Risk Parity</th>
+      <td>0.1355</td>
+      <td>0.1657</td>
+      <td>0.6970</td>
+      <td>-0.2782</td>
+    </tr>
+    <tr>
+      <th>Constrained (max 30%)</th>
+      <td>0.1511</td>
+      <td>0.1690</td>
+      <td>0.7759</td>
+      <td>-0.2620</td>
+    </tr>
+    <tr>
+      <th>Rolling Window</th>
+      <td>0.0813</td>
+      <td>0.1649</td>
+      <td>0.3716</td>
+      <td>-0.3938</td>
+    </tr>
+    <tr>
+      <th>Equal Weight (Baseline)</th>
+      <td>0.1342</td>
+      <td>0.1769</td>
+      <td>0.6452</td>
+      <td>-0.2998</td>
+    </tr>
+    <tr>
+      <th>SPY (Benchmark)</th>
+      <td>0.1401</td>
+      <td>0.2079</td>
+      <td>0.5774</td>
+      <td>-0.3575</td>
+    </tr>
+  </tbody>
+</table>
+<span class="image main"><img src="images/pythonpost1img2.png" alt="" /></span>
+    </body>
+	<li>Interactive HTML performance comparison table (shown above)</li>
+    <li>Publication-ready PNG visualization of strategy performance (shown above)</li>
+    <li>Cumulative returns comparison across all strategies (shown above)</li>
+    <li>Drawdown analysis showing portfolio behavior during market downturns (shown above)</li>
+    <li>Risk vs. Return scatter plot showing efficient frontier (shown above)</li>
+    <li>Bootstrap weight distribution analysis for robustness validation</li>
+  </ul>
+
+  <h2>Tools & Libraries Used</h2>
+  <ul>
+    <li><strong>Python:</strong> Core programming language</li>
+    <li><strong>pandas:</strong> Data manipulation and analysis</li>
+    <li><strong>numpy:</strong> Numerical computing</li>
+    <li><strong>scipy.optimize:</strong> Portfolio optimization algorithms</li>
+    <li><strong>scikit-learn:</strong> Ledoit-Wolf shrinkage estimator</li>
+    <li><strong>matplotlib:</strong> Visualization and charting</li>
+    <li><strong>yfinance:</strong> Financial data API access</li>
+  </ul>
+
+  <h2>Project Impact</h2>
+  <p>This project demonstrates the practical application of modern portfolio theory and advanced optimization techniques. By rigorously comparing multiple strategies with out-of-sample testing, it provides valuable insights into portfolio construction best practices and validates the effectiveness of sophisticated optimization approaches in improving risk-adjusted returns.</p>
+
+  <h2>Repository</h2>
+  <p>Full code, analysis, and documentation available on GitHub <a href="https://github.com/s-pez/Portfolio-Optimization-and-Stability-Analysis-Project"><u>here</u></a>. Includes Jupyter notebook with complete analysis pipeline, README with detailed methodology, and generated performance reports.</p>
+</section>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="contactme.html">Contact Me</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li>
+											<span class="opener">Data Projects By Language</span>
+											<ul>
+												<li><a href="rmain.html">R</a></li>
+												<li><a href="pythonmain.html">Python</a></li>
+												<li><a href="sasmain.html">SAS</a></li>
+												<li><a href="sqlmain.html">SQL</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Data Visualization Projects</span>
+											<ul>
+												<li><a href="tableaumain.html">Tableau</a></li>
+												<li><a href="powerbimain.html">Power BI</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="pythonpost2.html" class="image"><img src="images/pythonpost2img1.png" alt="" /></a>
+											<p>Immunization Information System Data Quality Audit</p>
+										</article>
+										<article>
+											<a href="pythonpost1.html" class="image"><img src="images/pythonpost1img2.png" alt="" /></a>
+											<p>Risk-Adjusted Portfolio Optimization and Stability Analysis</p>
+										</article>
+										<article>
+											<a href="tabpost2.html" class="image"><img src="images/tabpost2img.png" alt="" /></a>
+											<p>Cardiovascular Risk Profiles Among Female Patients</p>
+										</article>
+									</div>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sarita Perez. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+			<!-- Sidebar end -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
