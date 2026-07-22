@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sarita Perez - HbA1c Cuttoff Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/sarita-perez-/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/s-pez" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>HbA1c Screening and Diagnostic Cutoff Review</h1>
+									</header>
+
+									<h2>Project Overview</h2>
+									<p>Using simulated adult data calibrated to broad patterns seen in national diabetes surveillance, this work evaluates HbA1c cutoffs from 5.7% to 6.5% and compares their diagnostic performance. The goal was not to redefine a national clinical standard, but to demonstrate a rigorous analytic workflow for evaluating screening and diagnostic thresholds.</p>
+
+									<h2>What Was Done</h2>
+									<ul>
+										<li><strong>Compared candidate cutoffs:</strong> Sensitivity, specificity, positive predictive value, and screen-positive volume were evaluated across several HbA1c thresholds.</li>
+										<li><strong>Applied ROC-based reasoning:</strong> The analysis reviewed the tradeoff between catching true cases and avoiding false positives.</li>
+										<li><strong>Checked equity:</strong> Performance was compared across racial and ethnic groups to see whether the cutoff behaved similarly in each population.</li>
+										<li><strong>Prepared a decision-ready summary:</strong> The output was structured so leadership could review the threshold choice as a program decision rather than a single-number judgment.</li>
+									</ul>
+
+									<h2>Key Findings</h2>
+									<ul>
+										<li><strong>ROC-optimal cutoff:</strong> The Youden-based cutoff was 6.3%, slightly below the current 6.5% threshold. That is consistent with the current standard being set to favor higher specificity and positive predictive value in order to limit overdiagnosis.</li>
+										<li><strong>Clinical tradeoff:</strong> Moving from 5.7% to 6.5% reduced sensitivity by about 7 percentage points while increasing specificity and PPV substantially. It also lowered the number of screen-positive results from 508 to 170 per 1,000, which is a meaningful workload reduction for confirmatory testing.</li>
+										<li><strong>Equity check:</strong> Sensitivity and specificity at the 6.5% threshold were broadly similar across the groups examined in the simulation, which demonstrates the method and highlights why subgroup analysis should be built into threshold reviews.</li>
+									</ul>
+
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>HbA1c Cutoff</th>
+													<th>Sensitivity</th>
+													<th>Specificity</th>
+													<th>PPV</th>
+													<th>Screen-Positive / 1,000</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>5.7%</td>
+													<td>97.3%</td>
+													<td>59.6%</td>
+													<td>35.0%</td>
+													<td>508</td>
+												</tr>
+												<tr>
+													<td>6.0%</td>
+													<td>95.8%</td>
+													<td>85.4%</td>
+													<td>59.6%</td>
+													<td>294</td>
+												</tr>
+												<tr>
+													<td>6.3%</td>
+													<td>93.3%</td>
+													<td>97.1%</td>
+													<td>88.0%</td>
+													<td>194</td>
+												</tr>
+												<tr>
+													<td><strong>6.5% (current)</strong></td>
+													<td><strong>89.9%</strong></td>
+													<td><strong>99.3%</strong></td>
+													<td><strong>96.9%</strong></td>
+													<td><strong>170</strong></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                    <p style="text-align: center;"><strong>Figure 1:</strong> ROC curve showing the tradeoff between sensitivity and specificity across candidate cutoffs.</p>
+										<p><img src="images/saspost1img4.png" alt="ROC curve for HbA1c cutoff analysis" style="width: 30%; display: block; margin: 0 auto;" /></p>
+
+										<p style="text-align: center;"><strong>Figure 2:</strong> HbA1c distribution in diabetic and non-diabetic adults.</p>
+										<p><img src="images/saspost1img1.png" alt="HbA1c distribution" style="width: 30%; display: block; margin: 0 auto;" /></p>
+
+									<h2>Equity Check</h2>
+									<p>At the 6.5% threshold, sensitivity and specificity were broadly similar across the groups examined in the simulation. That finding is helpful for illustrating the method, but it should not be treated as a real-world conclusion without more robust data and validation. In practice, this is exactly the type of subgroup analysis that should be repeated before adopting or defending any screening threshold.</p>
+
+									<h2>Recommendation</h2>
+									<p>The memo does not argue for changing the current 6.5% cutoff; rather, it shows the analytic framework that should be used whenever a program reviews a diagnostic or screening threshold. The workflow includes comparing multiple cutoffs, inspecting the ROC curve, checking subgroup performance, and making the equity implications explicit.</p>
+
+									<h2>Notes</h2>
+									<p>This summary is based on simulated data and is intended as a demonstration of method rather than a real epidemiologic estimate. A production analysis would use real surveillance or health-system data, validated diagnosis labels, and appropriate covariates.</p>
+								<h2>Repository</h2>
+                <p>Full code, analysis, and documentation available on GitHub <a href="https://github.com/s-pez/HbA1c-Analysis"><u>here</u></a>. </p>
+                
+              </section>
+
+                   </div>
+					      </div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="contactme.html">Contact Me</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li>
+											<span class="opener">Data Projects By Language</span>
+											<ul>
+												<li><a href="rmain.html">R</a></li>
+												<li><a href="pythonmain.html">Python</a></li>
+												<li><a href="sasmain.html">SAS</a></li>
+												<li><a href="sqlmain.html">SQL</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Data Visualization Projects</span>
+											<ul>
+												<li><a href="tableaumain.html">Tableau</a></li>
+												<li><a href="powerbimain.html">Power BI</a></li>
+                        <li><a href="arcgismain.html">ArcGIS Maps</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="pythonpost2.html" class="image"><img src="images/pythonpost2img1.png" alt="" /></a>
+											<p>Immunization Information System Data Quality Audit</p>
+										</article>
+										<article>
+											<a href="pythonpost1.html" class="image"><img src="images/pythonpost1img2.png" alt="" /></a>
+											<p>Risk-Adjusted Portfolio Optimization and Stability Analysis</p>
+										</article>
+										<article>
+											<a href="tabpost2.html" class="image"><img src="images/tabpost2img.png" alt="" /></a>
+											<p>Cardiovascular Risk Profiles Among Female Patients</p>
+										</article>
+									</div>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sarita Perez. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+			<!-- Sidebar end -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
